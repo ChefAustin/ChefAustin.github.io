@@ -4,15 +4,12 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+![Jaipur, India - November 2017]({{ "/assets/austin_jaipur.jpg" | absolute_url }})
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+Facts
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+- Lifelong tinkerer/hacker/breaker of tech-y things
+- Born the same year as the fall of the Berlin Wall
+- Bachelor's of Science in Digital Cinema from [DePaul University](https://depaul.edu/)
+- Corn-fed Ohioan now residing in Denver, CO
+- Some folks call me "Chef" (some chefs would hate this)  as at one time I was a line cook
