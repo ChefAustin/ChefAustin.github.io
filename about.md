@@ -6,7 +6,7 @@ permalink: /about/
 
 ![Jaipur, India - November 2017]({{ "/assets/austin_jaipur.jpg" | absolute_url }})
 
-Facts
+## Facts
 
 - Lifelong tinkerer/hacker/breaker of tech-y things
 - Born the same year as the fall of the Berlin Wall
