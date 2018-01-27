@@ -13,5 +13,6 @@ permalink: /about/
 - Bachelor's of Science in Digital Cinema from [DePaul University](https://depaul.edu)
 - Corn-fed Ohioan (Cincinnati) now residing in Colorado (Denver)
 - Some folks call me "Chef" (some chefs would hate this); at one time I was a line cook at [a bar](http://darkhorsebar.com)
+- Bert, my co-pilot who just so happens to be a Poodle/Westie, says [my code](https://github.com/ChefAustin) sucks
 - Frequently found hanging out in [MacAdmins Slack](https://macadmins.herokuapp.com)
 - Links to social media presence can be found :point_down:
