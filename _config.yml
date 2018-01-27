@@ -21,3 +21,4 @@ theme: minima
 plugins:
   - jemoji
   - jekyll-feed
+  - jekyll-mentions
