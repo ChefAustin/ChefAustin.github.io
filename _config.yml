@@ -21,19 +21,3 @@ theme: minima
 plugins:
   - jemoji
   - jekyll-feed
-  - jekyll-youtube
-  - jekyll-seo-tag
-  - jekyll-deploy
-
-# Jekyll SEO Tag
-twitter:
-  username: ChefWithGusto
-social:
-  name: Austin Culter
-  links:
-    - https://twitter.com/ChefWithGusto
-    - https://www.linkedin.com/in/austinculter
-    - https://github.com/ChefAustin
-
-deploy:
-  - git push
