@@ -15,7 +15,14 @@ author: Austin Culter
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+syntax_highlighter: rouge
 theme: minima
+
+highlighter: rouge
+sass:
+sass_dir: _sass
 
 # Custom plugins
 plugins:

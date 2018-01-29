@@ -1,0 +1,60 @@
+---
+layout: default
+---
+<div class="wrapper style1">
+    <article class="container">
+        <header class="major">
+            <h2 class="post-title">{{ page.title }}</h2>
+            <h5 class="post-description">{{ page.description }}</h5>
+			<h5>
+				{% capture words %}
+				  {{ page.content | number_of_words }}
+				{% endcapture %}
+				{% unless words contains "-" %}
+				  {{ words | plus: 250 | divided_by: 250 | append: " minute read" }}
+				{% endunless %}
+			</h5>
+                <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+			<h6>
+			Categories:
+			  {% for tag in page.tags %}
+				<a href="/tags#{{ tag | replace: ' ','+'}}">{{ tag }}&nbsp;&nbsp;</a>
+			  {% endfor %}
+			</h6>
+        </header>
+
+        <section class="post-content">
+            {{ content }}
+        </section>
+
+        <section class="post-comments">
+            {% if jekyll.environment == 'production' %}
+				{% if page.comments %}
+					<div id="disqus_thread"></div>
+					<script>
+					var disqus_config = function () {
+					this.page.url = "http://blog.eriknicolasgomez.com{{ page.url }}";  // Replace PAGE_URL with your page's canonical URL variable
+					this.page.identifier = "{{ page.id }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+					};
+					(function() { // DON'T EDIT BELOW THIS LINE
+					var d = document, s = d.createElement('script');
+					s.src = '//blog-eriknicolasgomez-com.disqus.com/embed.js';
+					s.setAttribute('data-timestamp', +new Date());
+					(d.head || d.body).appendChild(s);
+					})();
+					</script>
+					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+				{% endif %}
+            {% endif %}
+        </section>
+
+        <footer>
+            {% if page.previous %}
+            <a href="{{ page.previous.url }}" class="float-left">&larr; Previous post</a> {% endif %}
+            {% if page.next %}
+            <a href="{{ page.next.url }}" class="float-right">Next post &rarr;</a> {% endif %}
+        </footer>
+
+    </article>
+
+</div>
