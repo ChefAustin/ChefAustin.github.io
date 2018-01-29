@@ -10,8 +10,10 @@ gem 'minima', '~> 2.0'
 group :jekyll_plugins do
   gem 'jekyll-feed', '~> 0.6'
   gem 'jemoji'
+  gem 'jekyll-seo-tag'
   gem 'kramdown'
   gem 'jekyll-mentions'
+  gem 'jekyll-gist'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -13,9 +13,6 @@ twitter_username: ChefWithGusto
 github_username:  ChefAustin
 author: Austin Culter
 
-# Post excerpt config
-
-
 # Build settings
 markdown: kramdown
 theme: minima
@@ -25,3 +22,5 @@ plugins:
   - jemoji
   - jekyll-feed
   - jekyll-mentions
+  - jekyll-seo-tag
+  - jekyll-gist
