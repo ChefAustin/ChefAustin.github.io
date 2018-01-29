@@ -6,7 +6,7 @@ categories: macos
 ---
 
 
-To put it quite simply: anymore, there is no need to be installing an all-to-common tool called [Caffeine](http://lightheadsw.com/caffeine). Apple has taken the liberty of saving us the legwork, and went ahead and included this handy little binary in macOS. As far as the man page is concerned, `caffeinate` allows one to...
+To put it quite simply: anymore, there is no need to be installing an all-to-common tool called [Caffeine](http://lightheadsw.com/caffeine). Apple has taken the liberty of saving us the legwork, and went ahead and included a handy little binary in macOS. As far as the man page is concerned, `caffeinate` allows one to...
 
 > prevent the system from sleeping on behalf of a utility
 
