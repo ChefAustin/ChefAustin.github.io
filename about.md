@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-![Jaipur, India - November 2017]({{ "/assets/austin_jaipur.jpg" | absolute_url }})
+![Jaipur, India - November 2017]({{ "/assets/austin_mumbai.jpg" | absolute_url }})
 
 ### Facts
 
