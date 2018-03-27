@@ -8,6 +8,7 @@ tags: macos
 
 Let this post serve as a brief overview on how to build a customized, signed build of Google's Deprecation Notifier utility. I say brief as it assumes you've got a mechanism to deploy, and already have a means by which to trigger the application. Onward...
 
+<br/>
 #### Pre-Requisites:
 
 1. GitHub account
