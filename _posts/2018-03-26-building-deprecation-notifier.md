@@ -3,7 +3,7 @@ layout: post
 title:  "Building Deprecation Notifier"
 date:   2018-03-26 19:10:00 -0700
 categories: tech
-tags: macos
+tags: macos macops deprecation_notifier
 ---
 
 Let this post serve as a brief overview on how to build a customized, signed build of Google's Deprecation Notifier utility. I say brief as it assumes you've got a mechanism to deploy, and already have a means by which to trigger the application. I'll touch on this a bit more near the end, but for now... Onward!
