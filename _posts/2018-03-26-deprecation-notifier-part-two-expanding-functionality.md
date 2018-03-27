@@ -7,7 +7,7 @@ tags: macos macops deprecation_notifier
 ---
 
 
-A few months ago I found myself hacking away at Google's [Deprecation Notifier source code](https://github.com/google/macops/tree/master/deprecation_notifier) in hopes of finding a way to close an [open issue](https://github.com/google/macops/issues/67) relating to version comparison<sup>[1](#Footnotes)</sup>. More specifically, Deprecation Notifier would only allow an admin to utilize the tool for major updates (e.g. 10.12 to 10.13), but didn't have the logic inherent to perform comparisons between minor versions (e.g. 10.13.2 to 10.13.3). Seemed straight-forward enough, so I brought out the shovel and began to dig...
+A few months ago I found myself hacking away at Google's [Deprecation Notifier source code](https://github.com/google/macops/tree/master/deprecation_notifier) in hopes of finding a way to close an [open issue](https://github.com/google/macops/issues/67) relating to version comparison<sup>[1](#Footnotes)</sup>. More specifically, Deprecation Notifier would only allow an admin to utilize the tool for major updates (e.g. 10.12 to 10.13), but didn't have the logic inherent to perform comparisons between minor versions (e.g. 10.13.2 to 10.13.3). Seemed straightforward enough, so I brought out the shovel and began to dig...
 
 Before we get into the weeds, let's understand what Deprecation Notifier is, what it does, and what it doesn't do. From the [horse's mouth...](https://github.com/google/macops/blob/master/deprecation_notifier/README.md)
 
@@ -24,7 +24,6 @@ To reiterate, Deprecation Notifier is _not_ fitted (yet... working on it) to nag
 
 #### Where to begin...
 Let it be known, that when I first embarked on this journey I had never touched Objective-C (I didn't even have a full installation of Xcode on my box) before and that this would not have been possible without significant help from [a really great guy](https://github.com/mplewis).
-cd Anywho...
 
 With Xcode open and a gang of Yerba Mate cans at the hip, I cloned the repository and began to sift through the source looking for something that was familiar. Having started with `Localizable.strings` (because, as the documentation states, that is where "all customization should be possible") was a good choice as this led me to the `expectedVersion` string.
 
