@@ -31,7 +31,7 @@ Let this post serve as a brief overview on how to build a customized, signed bui
 
 3. We've now done all that is _absolutely necessary_ for us to build and deploy Deprecation Notifier, but I want to go a step further and put that Apple Developer certificate to good use, so let's configure the project to sign our `.app` after building.
 
- Navigate back to the projects root in Xcode's left-hand pane, and then head to the 'General' view from the top navigation bar. Here we're going to modify the [Bundle Identifier](https://cocoacasts.com/what-are-app-ids-and-bundle-identifiers/) to match our company's [reverse domain name](https://en.wikipedia.org/wiki/Reverse_domain_name_notation), and allow Xcode to sign our build of `DeprecationNotifier.app` with the Apple Developer certificate in our Keychain:
+3. Navigate back to the projects root in Xcode's left-hand pane, and then head to the 'General' view from the top navigation bar. Here we're going to modify the [Bundle Identifier](https://cocoacasts.com/what-are-app-ids-and-bundle-identifiers/) to match our company's [reverse domain name](https://en.wikipedia.org/wiki/Reverse_domain_name_notation), and allow Xcode to sign our build of `DeprecationNotifier.app` with the Apple Developer certificate in our Keychain:
 
  ![Alt Text]({{ "/assets/depnotifier_general_settings.gif" | absolute_url }})
 
