@@ -55,4 +55,4 @@ After you see your build was successful, we can then verify the code signature u
 
 #### That's it!
 
-Now you just need to deploy it, and determine your preferred means of invoking it; I prefer using a custom LaunchAgent, but there's no reason that you couldn't have it triggered by a run of Chef, as a postflight to a Munki run, or any whatever ace you've got up your sleeve.
+Now you just need to deploy it, and determine your preferred means of invoking it; I prefer using a custom LaunchAgent, but there's no reason that you couldn't have it triggered by a run of Chef, as a postflight to a Munki run, or whatever ace you've got up your sleeve.
