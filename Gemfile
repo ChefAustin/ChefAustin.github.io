@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Scaffolding
-gem 'jekyll', '~> 3.6.2'
+gem 'jekyll', '~> 3.6.3'
 
 # This is the default theme for new Jekyll sites. You may change this.
 gem 'minima', '~> 2.0'
