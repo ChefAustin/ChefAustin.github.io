@@ -20,4 +20,4 @@ Looking forward five months, there will be some really great speakers at the 201
 Coming from a film/video background, I'm especially excited to hear Jasper Siegers chat about PostLab's use of GitLab for version control of Final Cut libraries (something they _surely_ didn't teach me about in film school!). It is diverse topics like these that make MacDevOpsYVR a great time to learn more about the kind of obstacles that the _entire_ MacAdmins community face (not just those that closely align with one's own daily hurdles).
 
 And not to mention... Look at how cool those conference badges are!
-![Alt Text]({{ "/assets/austin_macdevopsyvr.png" | absolute_url }})
+![Alt Text]({{ "/assets/mdoyvr_badge.png" | absolute_url }})
