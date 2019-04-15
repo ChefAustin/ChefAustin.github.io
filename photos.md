@@ -7,7 +7,7 @@ permalink: /photos/
 ## 2017
 ### India
 - [Delhi](https://photos.google.com/share/AF1QipPX-Jd2kE9VlBcZ3SdeE4qTlyZGEXUK8MpIRIGNzd4jMrqs127bLZSL0kKxYwSrTw/photo/AF1QipNA-FowWXz2-wsDZu4tjqoGAZGebpfSWDDggZE?key=ek5DUVI5R1p6d3ZVci1xNHBXV0J6czJvTGVGa3pB)
-- Agra
+- [Agra](https://photos.google.com/share/AF1QipNKQqRdnMviLmK2zO1sMAoECxM50keXYd7mX1NOiId9_ATgqdlKqXIpgBZTc3Eq5Q/photo/AF1QipO72WUzuauXpCF8dFAoqNIwXeOOW2UC7Ev8f4E?key=SGFvOGlVbHBVM3llT3Bab1NBaTA4Q3FscmprSklB)
 - [Ranthambore](https://photos.google.com/share/AF1QipOsExLbBD2JIdjpoYi_2v-cZQWA1HcI45L1Zi0eRiI0mWp1XAZ_nk6JSTiAfGbhMg/photo/AF1QipOXSBipMofqV9zVEG06smW-ZgKpug5EI5cZf-I?key=WVVuckpZMDNaVEMxOWlqaHRaX0hRampWRS1KX2ln)
 - [Jaipur](https://photos.google.com/share/AF1QipOIaMF2gBf6cb_Iq6rgK2jSSYzWJT2H34xN1q7UouuWXraPEZtqGu1QRXl2tCywVA/photo/AF1QipNOqW45YBiSgSWLLc0fgsmXHol2no0od3nlU8o?key=ZjlSWnVmQ1B1OHpjVDJkc3NMSFhfMTNwaXJIdEZ3)
 - [Mumbai](https://photos.google.com/share/AF1QipMpEAisfxHiinRmv5nRmi0XxlDfgobRS9rAwaoLJqwxpANCsgURFWwLG7V8hj5Hzg/photo/AF1QipPqtDtjpxRLAW6yL3x5oOCjZMV5ck_9aicYkQk?key=UjlDX3VmWHNBY1FacHk0eWJxTU0tNWJza3pqQlRB)
