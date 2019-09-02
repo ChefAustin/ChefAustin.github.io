@@ -13,7 +13,7 @@ For sake of ease, this post makes the following assumptions:
 
 
 #### Step 1: Getting Raspbian
-First, you will need to procure an operating system image for your Raspberry Pi and a utility called [balenaEtcher](https://www.balena.io/etcher/) to flash that image onto your SD card. 
+First, you will need to procure an operating system image for your Raspberry Pi and a utility called [balenaEtcher](https://www.balena.io/etcher/) to flash that image onto your SD card.
 
 There are lots of choices out there for RPi-compatible operating systems, but for this post we'll be using Raspbian. Raspbian is a derivative of the Debian operating system which has been tuned specifically for use with Raspberry Pi hardware, and is the Pi community's most common OS choice for projects like these. As of writing this, Raspbian is built atop the Debian Buster release.
 
@@ -27,7 +27,7 @@ The choice of which variant to use is up to you. In most cases, I normally opt f
 _Do note:_ If you're running the macOS 10.15 Catalina beta (like I am) you will need to launch balenaEtcher via the binary (embedded in its `.app`) with `sudo` in order for the SD card flashing process to succeed. To launch it with `sudo`, open a terminal and enter the following:
 `$ sudo /Applications/balenaEtcher.app/Contents/MacOS/balenaEtcher`
 
-With balenaEtcher's GUI open, simply drag the Raspbian image's `.zip` file into that window, connect your SD card, and hit "Flash!". The flashing process will take about 5 minutes to finish. Once it has completed, the SD card might have been automatically ejected, if that's the case then you will need to disconnect then reconnect the SD card to your machine. 
+With balenaEtcher's GUI open, simply drag the Raspbian image's `.zip` file into that window, connect your SD card, and hit "Flash!". The flashing process will take about 5 minutes to finish. Once it has completed, the SD card might have been automatically ejected, if that's the case then you will need to disconnect then reconnect the SD card to your machine.
 
 **Now open up a terminal window and let's get configuring!**
 
@@ -37,7 +37,7 @@ Now that the Raspbian image has been laid down on the SD card, we need to config
 In order for our Raspberry Pi to enable SSH connections upon its initial network connection (which we will setup next), we need to make sure there is an empty file called `ssh` at the root of the RPi's boot volume. The existence of the `ssh` file _at this location_ will tell Raspbian that we acknowledge the security concern with allowing SSH connections (primarily due to the fact that the device will have only default credentials at that time) but we want to do it anyway. That said, we can easily achieve creating this empty file using `touch`:
 `$ touch /Volumes/boot/ssh`
 
-In order for your RPi to know what wifi network is _your_ wifi network, we need to create a new configuration file on your SD card which dictates these settings. Let's use `nano` to create this new file: 
+In order for your RPi to know what wifi network is _your_ wifi network, we need to create a new configuration file on your SD card which dictates these settings. Let's use `nano` to create this new file:
 `$ nano /Volumes/boot/wpa_supplicant.conf`
 
 With `nano` open, we can now begin writing the configuration for connecting to our wireless network, which will look something like this:
@@ -56,7 +56,7 @@ There are three key-values in this file that you will need to change:
 2. `ssid` => Swap out `MySSID` for whatever you've named your wifi network
 3. `psk` => Here you need to enter your SSID's preshared key (a.k.a your wifi password)
 
-Once your config file has been updated, hit `ctrl + x` (to initiate exiting `nano`) followed by `y` (to save your changes) and then simply hit `Enter` (to confirm saving changes to `/Volumes/boot/wpa_supplicant.conf`). Now simply eject your first SD card, put it aside, and repeat steps 1 and 2 for however many cards you have. 
+Once your config file has been updated, hit `ctrl + x` (to initiate exiting `nano`) followed by `y` (to save your changes) and then simply hit `Enter` (to confirm saving changes to `/Volumes/boot/wpa_supplicant.conf`). Now simply eject your first SD card, put it aside, and repeat steps 1 and 2 for however many cards you have.
 
 We are going to do the next step one device at a time (so don't power up all your Pi's yet!) to avoid any sort of network issues relating to duplicate hostnames on these devices.
 
@@ -77,10 +77,10 @@ The absolute first thing you should do is to change the default password to a st
 pi@raspberrypi:~ $ passwd
 Changing password for pi.
 (current) UNIX password:
-Enter new UNIX password: 
-Retype new UNIX password: 
+Enter new UNIX password:
+Retype new UNIX password:
 passwd: password updated successfully
-pi@raspberrypi:~ $ 
+pi@raspberrypi:~ $
 ```
 
 ##### Change hostname and hosts file
@@ -123,11 +123,11 @@ ff02::2		ip6-allrouters
 192.168.0.115	pi5
 ```
 
-Once you've modified the system defaults for your first device, we need to reboot the device, with `sudo reboot`, and then wash-rinse-and-repeat step 3 for each subsequent device until you've got all your RPi4's reachable via hostname on your local wireless network. 
+Once you've modified the system defaults for your first device, we need to reboot the device, with `sudo reboot`, and then wash-rinse-and-repeat step 3 for each subsequent device until you've got all your RPi4's reachable via hostname on your local wireless network.
 
 #### Step 4: Docker Installation
 ##### Updating with `apt`
-At this point, all of our Raspberry Pi's have had their initial configuration set, but there's still a bit of groundwork needing to be laid down before we can get Docker running on these Bad Larry's. Specifically, we need to make sure that each of them are fully patched, that the `apt` package manager's cache of available packages is up-to-date, and that they all have the necessary packages (and their dependencies) installed on them. 
+At this point, all of our Raspberry Pi's have had their initial configuration set, but there's still a bit of groundwork needing to be laid down before we can get Docker running on these Bad Larry's. Specifically, we need to make sure that each of them are fully patched, that the `apt` package manager's cache of available packages is up-to-date, and that they all have the necessary packages (and their dependencies) installed on them.
 
 First, let's get these devices up-to-date by invoking this chain of commands:
 `pi@pi1:~ $ sudo apt update && sudo apt upgrade && sudo reboot`
@@ -142,11 +142,11 @@ I won't explain what each of these packages do, but I encourage you to Google th
 Since we've satisfied all necessary dependencies for Docker, we're ready to install it. Thanks to the kind folks over at Camp Docker, as they've provided us a quick'n'easy shell script to handle the installation; all we have to do is:
 `pi@pi1:~ $ curl -sSL https://get.docker.com |sh`
 
-Woohoo! Our Raspberry Pi is now Docker-laden. But in order to allow the `pi` user to use Docker, we need to add the user account to the `docker` group. 
+Woohoo! Our Raspberry Pi is now Docker-laden. But in order to allow the `pi` user to use Docker, we need to add the user account to the `docker` group.
 
 _"Wait... wut? What's the `docker` group you speak of?"_
 
-Ah, yes... The wonders of running arbitrary shell scripts from the internet. The shell script that we ran in the previous command not only installed the package for Docker, but it also made some slight modifications to the system itself. More specifically, the installation script we ran also created a new UNIX group called `docker`, and then granted privileges to run Docker to all members of that group. (If you're still curious, you can actually take a quick peek at all groups that exist on the system by running `cat /etc/group`.) 
+Ah, yes... The wonders of running arbitrary shell scripts from the internet. The shell script that we ran in the previous command not only installed the package for Docker, but it also made some slight modifications to the system itself. More specifically, the installation script we ran also created a new UNIX group called `docker`, and then granted privileges to run Docker to all members of that group. (If you're still curious, you can actually take a quick peek at all groups that exist on the system by running `cat /etc/group`.)
 
 Anywho, onward! To add our `pi` user to the `docker` group, we run:
 `pi@pi1:~ $ sudo usermod -aG docker pi`
@@ -206,7 +206,7 @@ WARNING: No cpu cfs quota support
 WARNING: No cpu cfs period support
 ```
 
-_Fantastic!_ We now have a functioning Docker environment running on our Raspberry Pi. Now to lay down the final piece of the Docker ecosystem: `docker-compose`
+_Fantastic!_ We now have a functioning Docker environment running on our Raspberry Pi. Now to lay down the final piece (albeit optional since compose is not required for Docker) of the Docker ecosystem: `docker-compose`
 ##### Docker-Compose
 Before we install compose, let's take a step back and get a brief overview of what it is. Docker provides us the ability to build containerized environments, and compose works atop that by allowing us to use the YAML syntax to define an application which spans across multiple containers. So if we look at a Docker container as a blueprint for the process of building a bike, we could look at compose as a blueprint for building a factory that builds bikes. Probably not the best analogy, but it will suffice...
 
@@ -241,7 +241,7 @@ To add a worker to this swarm, run the following command:
 
 To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
 ```
- 
+
 Additionally, after successful invocation of the swarm, `docker swarm init` even provides you the command needed for adding worker nodes to this swarm. Let's go ahead and SSH into another node, and run the provided command to get our swarm complete with a worker:
 ```
 pi@pi2:~ $ docker swarm join --token SWMTKN-1-1aibc07zzza12asdfhjmxaxabc76mbhaabcza0a0sx0abcc2zp-00s6xzdt27y2gk2kpm0cgo6y1 192.168.0.111:2377
