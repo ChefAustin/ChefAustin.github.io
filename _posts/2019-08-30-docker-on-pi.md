@@ -11,6 +11,7 @@ For sake of ease, this post makes the following assumptions:
 - You've a macOS device for initial configuration of the SD cards
 - Familiarity with a termianl
 
+
 #### Step 1: Getting Raspbian
 First, you will need to procure an operating system image for your Raspberry Pi and a utility called [balenaEtcher](https://www.balena.io/etcher/) to flash that image onto your SD card. 
 
