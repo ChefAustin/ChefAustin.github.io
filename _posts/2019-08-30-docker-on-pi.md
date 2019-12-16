@@ -9,7 +9,7 @@ tags: rpi raspbian docker swarm
 For sake of ease, this post makes the following assumptions:
 - _At least_ 2x Raspberry Pi 4's (3 is better, 5 is ideal)
 - You've a macOS device for initial configuration of the SD cards
-- Familiarity with a termianl
+- Familiarity with a terminal
 
 
 #### Step 1: Getting Raspbian
