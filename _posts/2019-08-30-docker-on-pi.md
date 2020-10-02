@@ -8,7 +8,7 @@ tags: rpi raspbian docker swarm
 ### Docker Swarm Services on a Raspberry Pi 4 Cluster
 For sake of ease, this post makes the following assumptions:
 - _At least_ 2x Raspberry Pi 4's (3 is better, 5 is ideal)
-- You've a macOS device for initial configuration of the SD cards
+- You've got a macOS device for initial configuration of the SD cards
 - Familiarity with a terminal
 
 
@@ -24,8 +24,8 @@ To procure a copy of the Raspbian image, mosey on over to the [Raspberry Pi's do
 
 The choice of which variant to use is up to you. In most cases, I normally opt for the most lightweight image and install additional packages as I need then, but for this post, I chose going with Raspbian Full. Given that we're going to be configuring at least 2 separate Docker nodes (1x manager, 1x worker), it will be beneficial to use the same image variant across both of your RPi4's. Now, while your Raspbian image is downloading, you will want to download and install the latest release of [balenaEtcher](https://github.com/balena-io/etcher/releases/latest).
 
-_Do note:_ If you're running the macOS 10.15 Catalina beta (like I am) you will need to launch balenaEtcher via the binary (embedded in its `.app`) with `sudo` in order for the SD card flashing process to succeed. To launch it with `sudo`, open a terminal and enter the following:
-`$ sudo /Applications/balenaEtcher.app/Contents/MacOS/balenaEtcher`
+_Do note:_ If you're running the macOS 10.15 Catalina beta (like I am) you will need to launch balenaEtcher as root via `sudo` in order for the SD card flashing process to succeed. To launch it with `sudo`, open a terminal and enter the following:
+`$ sudo open -a /Applications/balenaEtcher.app`
 
 With balenaEtcher's GUI open, simply drag the Raspbian image's `.zip` file into that window, connect your SD card, and hit "Flash!". The flashing process will take about 5 minutes to finish. Once it has completed, the SD card might have been automatically ejected, if that's the case then you will need to disconnect then reconnect the SD card to your machine.
 
@@ -110,7 +110,7 @@ Now if this is the 2nd/3rd/Nth device you're configuring, you'll want to also ap
 You might have noticed that after changing the `/etc/hostname` file, your shell prompt still reflects `pi@raspberrypi:~ $`. _What gives?_ Don't worry, after rebooting the device our change will take effect.
 
 ##### Reboot
-Before you reboot the device, we want to jot down its IP address, as it will need to be populated in the `/etc/hosts` file on each of the devices you configure after the first one. Also, don't forget to cycle back through all devices you're configuring to ensure that all of the Pi's IP/hostname mappings exist. Let's assume you have 5x Pi's, your `hosts` file on `pi1` might look something like this when its all said and done:
+Before you reboot the device, we want to jot down its IP address, as it will need to be populated in the `/etc/hosts` file on each of the devices you configure after the first one. Also, don't forget to cycle back through all devices you're configuring to ensure that all of the Pi's IP/hostname mappings exist. Let's assume you have 5x Pi's, your `hosts` file on `pi1` might look something like this when it's all said and done:
 ```
 127.0.0.1	pi1
 ::1		localhost ip6-localhost ip6-loopback
@@ -254,7 +254,7 @@ pi@pi3:~ $ docker swarm join --token SWMTKN-1-1aibc07zzza12asdfhjmxaxabc76mbhaab
 This node joined a swarm as a worker.
 ```
 
-Now that all of our worker nodes have been added to the swarm, we can jump back into our manager node and confirm the status of all ndoes in the swarm:
+Now that all of our worker nodes have been added to the swarm, we can jump back into our manager node and confirm the status of all nodes in the swarm:
 ```
 pi@pi1:~ $ docker node ls
 ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS      ENGINE VERSION
