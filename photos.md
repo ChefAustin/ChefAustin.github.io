@@ -20,3 +20,12 @@ permalink: /photos/
 ### France
 - [Nice](https://photos.google.com/share/AF1QipNyB12AyLnyGEA6-LAPUMpSGUqcO0l3Roz92vmt5zv2eS6WUFiCDRhBgkIDd-oN7A/photo/AF1QipN9ltPvbybH3ve-OhPNHiXiMNrUHWgn4tN4etY?key=a2FvcF91WjkzM19aSGFrdlJHWUZSMURVajQ3eUt3)
 - [Paris](https://photos.google.com/share/AF1QipMi4sfnhJzwvJTo86LDZMmWBtqhtcvbKW5Mqor8AgmWeRX_ha2zzapwL5aKcCb_3A/photo/AF1QipPbQ19Z76ii4MUn5D7384S3i5s3XKrj2t5tyDA?key=WlhKdE1vNlJxTjJueFd5bzR6b1pfM3NZNkxLNWpn)
+
+
+## 2019
+### TODO
+- TODO
+
+## 2020
+### Italy
+- [Venice](https://photos.app.goo.gl/NSS6a4tA6svbtAtr6)
