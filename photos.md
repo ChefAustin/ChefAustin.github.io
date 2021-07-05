@@ -25,8 +25,10 @@ permalink: /photos/
 ## 2019
 ### United States
 - Napa (TODO)
+
 ### Czechia
 - Prague (TODO)
+
 ### Italy
 - Rome (TODO)
 
