@@ -16,7 +16,7 @@ group :jekyll_plugins do
   gem 'jekyll-sitemap'
   gem 'jekyll-youtube'
   gem 'jemoji'
-  gem "kramdown", ">= 2.3.0"
+  gem "kramdown"
   gem 'rouge'
 end
 

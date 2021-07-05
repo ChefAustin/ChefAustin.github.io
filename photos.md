@@ -23,8 +23,12 @@ permalink: /photos/
 
 
 ## 2019
-### TODO
-- TODO
+### United States
+- Napa (TODO)
+### Czechia
+- Prague (TODO)
+### Italy
+- Rome (TODO)
 
 ## 2020
 ### Italy
